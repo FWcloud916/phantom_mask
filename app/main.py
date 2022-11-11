@@ -25,3 +25,9 @@ app.add_middleware(
 
 app.include_router(auth.router, tags=["auth"])
 app.include_router(users.router, prefix="/users", tags=["users"])
+app.include_router(pharmacies.router, prefix="/pharmacies", tags=["pharmacies"])
+app.include_router(leaderboard.router, prefix="/leaderboard", tags=["leaderboard"])
+app.include_router(
+    purchase_histories.router, prefix="/purchase_histories", tags=["purchase_histories"]
+)
+app.include_router(masks.router, prefix="/masks", tags=["masks"])
